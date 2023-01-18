@@ -56,6 +56,9 @@ jobs:
           name: python-app
           path: .
           
+      - name: 'Upgrade setuptools'
+        run: pip install --upgrade setuptools
+          
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
